@@ -4,3 +4,19 @@ public class HelloWorld {
         System.out.println("Hello, World!");
     }
 }
+-----------------------------------------------------------------
+
+import java.util.*;
+
+class main {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("please enter the radius of cicle to get area of it");
+
+        int r = sc.nextInt();
+        int sum = r * r * 22/7;
+
+        System.out.println("the area of the circle is = " + sum);
+
+    }
+}
