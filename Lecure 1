@@ -1,3 +1,5 @@
+(1) Learned to print:-
+
 public class HelloWorld {
     public static void main(String[] args) {
         // Prints "Hello, World!" to the terminal window
@@ -5,6 +7,7 @@ public class HelloWorld {
     }
 }
 -----------------------------------------------------------------
+(2) leaned to take input:-
 
 import java.util.*;
 
