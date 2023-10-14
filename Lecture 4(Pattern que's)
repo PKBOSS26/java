@@ -1,0 +1,252 @@
+
+Problem (1) :- Rectangle
+Print 
+*****
+*****
+*****
+***** .
+Her comes new concept called (Nested loops) :- 
+import java.util.*;
+
+
+class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("please enter n & m for rows and collams respectively");
+       int n = sc.nextInt();
+       int m = sc.nextInt();
+
+
+       //outer loop
+       for (int i = 1; i <= n; i++) {
+           //inner loop
+           for (int j = 1; j <= m; j++) {
+               System.out.print("*");
+           }
+           System.out.println("*");
+       }
+   }
+}
+—------------------------------------------------------------------------------------------------------------------------
+Problem (2) :- print Hollw Rectangle
+*****
+*    *
+*    *
+*****
+
+import java.util.*;
+
+
+class Main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       System.out.println("Please enter n & m for columns and rows respectively");
+       int n = sc.nextInt();
+       int m = sc.nextInt();
+
+
+       // Outer loop
+       for (int i = 1; i <= n; i++) {
+           // Inner loop
+           for (int j = 1; j <= m; j++) {
+               // Cell -> (i, j)
+               if (i == 1 || j == 1 || i == n || j == m) {
+                   System.out.print("*");
+               } else {
+                   System.out.print(" ");
+               }
+           }
+           System.out.println();
+       }
+   }
+}
+—------------------------------------------------------------------------------------------------------------------------
+
+Problem (3) :- print half pyramid
+
+*
+**
+***
+****
+import java.util.*;
+class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       //taking input so we can print as big/small structure we want
+       int x = sc.nextInt();
+       //outer loop
+       for (int i = 1 ; i <=x ; i++){
+           //inner loop
+           for (int j = 1 ; j <i ; j++){
+               System.out.print("*");
+           }
+           System.out.println("*");
+       }
+   }
+}
+—------------------------------------------------------------------------------------------------------------------------
+
+(4) problem 4:- print inverted half pyramid
+****
+***
+**
+*  ans :- Did noting just reverse the outer loop code
+import java.util.*;
+class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       //taking input so we can print as big/small structure we want
+       int x = sc.nextInt();
+       //outer loop
+       for (int i = x ; i >=1 ; i--){
+           //inner loop
+           for (int j = 1 ; j <i ; j++){
+               System.out.print("*");
+           }
+           System.out.println("*");
+       }
+   }
+}
+—------------------------------------------------------------------------------------------------------------------------
+
+(5) print inverted half pyramid (rotated by 180 deg)
+    *
+  **
+ ***
+****
+Ans :- 
+import java.util.*;
+class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       //taking input so we can print as big/small structure we want
+       int x = sc.nextInt();
+       //outer loop
+       for (int i =1; i <=x;i++){
+           //inner loop -> space print
+           for (int j =1;j<=x-i;j++){
+               System.out.print(" ");
+           }
+           //after coming out of } (closing curly bracket) the all variable which were introduced will be removed
+          
+           //inner loop -> star print
+           for (int j=1 ; j<=i;j++) {
+               System.out.print("*");
+           }
+           System.out.println();
+       }
+   }
+}
+—------------------------------------------------------------------------------------------------------------------------
+(6) print half pyramid with numbers
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+Ans :- 
+import java.util.*;
+class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       //taking input so we can print as big/small structure we want
+       int n = sc.nextInt();
+       //outer loop
+       for (int i =1; i <=n;i++){
+           //inner loop -> space print
+           for (int j =1; j<=i; j++){
+               System.out.print(j +" ");
+           }
+           System.out.println();
+       }
+   }
+}
+—------------------------------------------------------------------------------------------------------------------------
+
+(7) print :- inverted half pyramid with number’s
+1 2 3 4 5
+1 2 3 4 
+1 2 3
+1 2
+1
+And:- 
+import java.util.*;
+class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       //taking input so we can print as big/small structure we want
+       int n = sc.nextInt();
+       //outer loop
+       for (int i =n; i >=1;i--){
+           //inner loop -> space print
+           for (int j =1; j<=i; j++){
+               System.out.print(j +" ");
+           }
+           System.out.println();
+       }
+   }
+}
+—------------------------------------------------------------------------------------------------------------------------
+
+(8) print :- Floyd’s Triangle
+1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+Ans :- 
+import java.util.*;
+class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       //taking input so we can print as big/small structure we want
+       int n = sc.nextInt();
+       int number = 1;
+       //outer loop
+       for (int i =1; i <=n;i++){
+           //inner loop -> space print
+           for (int j =1; j<=i; j++){
+               System.out.print(number + " ");
+               number++;//number = number + 1
+           }
+           System.out.println();
+       }
+   }
+}
+—------------------------------------------------------------------------------------------------------------------------
+
+(9) print:- 0-1 Triangle
+1
+0 1
+1 0 1
+1 0 0 1
+1 0 1 0 1
+Ans :- 
+import java.util.*;
+class main {
+   public static void main(String args[]) {
+       Scanner sc = new Scanner(System.in);
+       //taking input so we can print as big/small structure we want
+       int n = sc.nextInt();
+       //pattern found than if the sum of i + j = even then we print 1 and if it's odd then 0
+
+
+       //outer loop
+       for (int i =1; i<=n; i++){
+           //inner loop
+           for (int j=1; j<=i; j++){
+               int sum = i+j;
+               if (sum % 2 == 0){ //Even
+                   System.out.print("1 ");
+               }else { //odd
+                   System.out.print("0 ");
+               }
+           }
+           System.out.println();
+       }
+   }
+}
+
+COMPLETED TODAY WE JUST LEANT DIFFERENT TYPES OF PROBLEM’S
+WHAT WE DID :- JUST NEED TO FIND RELATION AND ADJUST AS PR NEED
+—------------------------------------------------------------------------------------------------------------------------
