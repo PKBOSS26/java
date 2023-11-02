@@ -1,0 +1,99 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+   public static void printMyName(String Name) {
+       System.out.println(Name);
+       return;
+   }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       String Name = sc.nextLine();
+
+
+       printMyName(Name);//call kiya function ko
+   }
+       }
+
+Learned the function topic .
+
+----------------------------------------------------------------------------------------
+2. Make a function to add 2 numbers and return the sum.
+import java.util.Scanner;
+
+
+public class Main {
+   public static int calcilateSum(int a , int b) {
+       int sum = a+b;
+       return sum;
+
+
+   }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int a = sc.nextInt();
+       int b = sc.nextInt();
+
+
+       int sum = calcilateSum(a,b);
+       System.out.println("sum of two numbwer is = " + sum);
+
+
+   }
+       }
+--------------------------------------------------------------------------------
+3.make a function to multiply 2 numbers and return the product.
+import java.util.Scanner;
+
+
+public class Main {
+   public static int calculteProduct(int a , int b){
+       return a*b;
+
+
+   }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int a = sc.nextInt();
+       int b = sc.nextInt();
+
+
+       System.out.println("product of two numbwer is = " + calculteProduct(a,b));
+
+
+   }
+       }
+
+----------------------------------------------------------------------------------------------
+4. Find the factorial of a number.
+import java.util.Scanner;
+
+
+public class Main {
+   public static void printFactorial(int n ){
+       //loop
+       if (n < 0){
+           System.out.println("invalid input");
+           return;
+       }
+       int factorial =1 ;
+
+
+       for (int i =n; i>=1; i--){
+           factorial = factorial* i;
+       }
+       System.out.println(factorial);
+       return;
+   }
+   public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+
+
+       printFactorial(n);
+   }
+       }
+-------------------------------------------------------------------------------
+Difference between function and methods :- 
+We call function directly but for methods we call if by object of class
